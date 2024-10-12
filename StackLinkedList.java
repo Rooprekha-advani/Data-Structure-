@@ -64,7 +64,7 @@ class StackLinkedList {
         stack.push(1); 
         stack.push(2); 
         stack.push(3); 
-    System.out.println("Top element is " + stack.top());
+   /*  System.out.println("Top element is " + stack.top());
     System.out.println("pop element" + stack.pop());
     System.out.println("pop element" + stack.pop());
     System.out.println("pop element" + stack.pop());
@@ -73,7 +73,8 @@ class StackLinkedList {
  System.out.print("Stack is empty");
  } 
  else {
- System.out.print("Stack is not empty");         }
+ System.out.print("Stack is not empty");      
+   } */
  }
     }
 
