@@ -6,7 +6,7 @@ class Node {
     this.name = name;
     this.next = null;
     this.prev = null;
-    }
+}
    } 
 
 class Doublylinkedlist  {
