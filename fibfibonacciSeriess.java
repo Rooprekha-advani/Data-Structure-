@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class fib {
+public class fibfibonacciSeriess {
     
     public static int fibonacciSeries (int n)
     {
@@ -12,7 +12,7 @@ public class fib {
     }
     public static void main (String args [])
     {
-       fib f = new fib();
+       fibfibonacciSeriess f = new fibfibonacciSeriess();
        Scanner s = new Scanner (System.in);
        System.out.println("enter numbers");
        int n1= s.nextInt();

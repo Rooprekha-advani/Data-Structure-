@@ -35,8 +35,6 @@ class UndoRedo {
             System.out.println("Nothing to redo.");
         }
     }
-
-
     void display() {
         System.out.println("Stack contents: " + mainStack);
     }

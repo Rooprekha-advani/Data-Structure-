@@ -48,14 +48,14 @@ else
                 temp.next = newNode; 
             size++; }
     }
-    //method 
+//method 
     void addtofirst(int data)
     {
        Node newNode = new Node(data);
        Node temp = head;
        head = newNode;
        head.next = temp; 
-       size ++;
+       si    ze ++;
     }
     //method
    void addinmiddle (int index, int data)

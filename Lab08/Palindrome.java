@@ -19,8 +19,6 @@ public class Palindrome {
       String str = "racecar";
       boolean palindrome = isPelindrome(str);
       System.out.println(str + " " + palindrome);
-
-
     }
     
 }
