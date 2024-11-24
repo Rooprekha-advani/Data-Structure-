@@ -43,7 +43,7 @@ root = null;
             } else {
                 addNode1(root.left, data);
             }
-        } else if (data > root.data) { // Added condition to handle right subtree
+        } else if (data > root.data) { 
             if (root.right == null) {
                 root.right = new Node(data);
             } else {
@@ -91,23 +91,50 @@ public int countOfNodes(Node root) {
          }
     }
 
+
+     void printPreorder (Node node)
+    {
+       
+     if(node != null)
+     {
+         System.out.println(node.data);
+         printPreorder (node.left);
+        printPreorder (node.right);
+         }
+    }
+
+    public void printPostorder (Node node)
+    {
+       
+     if(node != null)
+     {
+        printPostorder (node.left);
+       // System.out.println(root.data);
+        printPostorder (node.right);
+        System.out.println(node.data);
+   
+         }
+    }
+
+
+
+
    //
    public int height(Node root) {
     if (root == null) {
-        return -1; // Base case: the height of an empty tree is -1
+        return -1; 
     }
     
-    // Recursively calculate the height of the left subtree
+    
     int leftHeight = height(root.left);
     
-    // Recursively calculate the height of the right subtree
     int rightHeight = height(root.right);
     
-    // Manually find the maximum between leftHeight and rightHeight
+    
     if (leftHeight > rightHeight) {
-        return 1 + leftHeight; // Add 1 to account for the current node
+        return 1 + leftHeight; 
     } else {
-        return 1 + rightHeight; // Add 1 to account for the current node
+        return 1 + rightHeight; 
     }
 }
     
@@ -119,17 +146,20 @@ public int countOfNodes(Node root) {
         public static void main (String args[])
     {
   BinaryTree t = new BinaryTree();
-  t.addNode(2);
+ t.addNode(2);
   t.addNode(3);
   t.addNode(4);
-  t.addNode(5);
+ /*  t.addNode(5);
   t.addNode(6);
   t.addNode(7);
-  t.addNode(8);
+  t.addNode(8);*/
 
+  t.printPostorder(t.root);
+ /*  System.out.println("PreOrder Printing");
+  t.printPreorder(t.root);
 
-
- t.printInorder(t.root);  // This will print the tree in order
+  System.out.println("INOrder Printing");
+ t.printInorder(t.root);  // This will print the tree in order*/
  boolean found = t.searchNode(t.root, 1);
  System.out.println("Node with key 3 found: " + found);
 
@@ -139,6 +169,8 @@ public int countOfNodes(Node root) {
 
  int treeHeight = t.height(t.root);
         System.out.println("Height of the tree: " + treeHeight);
+
+       
 // System.out.println(t.height(t.root));
     }
 }
